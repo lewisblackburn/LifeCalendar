@@ -7,7 +7,8 @@ import java.time.temporal.ChronoUnit;
 
 public class GridPanel extends JPanel {
     public GridPanel(LocalDate birthDate, int lifespanYears) {
-        setLayout(new GridLayout(0, 52)); // 52 weeks per row
+        // 52 weeks per row with 1px gaps
+        setLayout(new GridLayout(0, 52, 1, 1));
 
         LocalDate today = LocalDate.now();
         LocalDate endDate = birthDate.plusYears(lifespanYears);
